@@ -1,0 +1,36 @@
+﻿@{
+    <h2>Export</h2>
+    ViewBag.Title = "Upload Page";
+}
+
+<div class="jumbotron">
+    <h1>CSV to SQL</h1>
+
+</div>
+
+
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Upload", "FileUpload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input type="file" name="readFile" id="Select file to upload" />
+                <br>
+                <input type="submit" value="Import CSV File" />
+                <br>
+            </div>
+        </div>
+        <br>
+        <span style="color:green">@ViewBag.Message</span>
+    }
+
+
+</body>

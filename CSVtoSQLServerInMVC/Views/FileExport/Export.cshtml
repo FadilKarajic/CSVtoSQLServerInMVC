@@ -1,0 +1,16 @@
+﻿
+@{
+    <h2>Export</h2>
+
+    ViewBag.Title = "Export";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="jumbotron">
+    <h1>SQL to CSV</h1>
+
+</div>
+
+@using (Html.BeginForm("FileExport", "FileExport", FormMethod.Get))
+{<input type="submit" value="Export to CSV format" />}
